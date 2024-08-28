@@ -9,14 +9,27 @@
 <body>
     <div class="container">
         <h1>Prueba de Reacción</h1>
+        <label for="attemptsSelect">Selecciona el número de intentos:</label>
+        <select id="attemptsSelect">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="10">10</option>
+        </select>
         <button id="startButton">Iniciar Prueba</button>
         <div id="reactionTest" class="hidden">
             <p id="instruction">Espera el estímulo...</p>
-            <button id="reactionButton" class="hidden">¡Reacciona!</button>
+            <div id="colorButtons" class="hidden">
+                <button id="blueButton" class="color-button" style="background-color: blue;"></button>
+                <button id="redButton" class="color-button" style="background-color: red;"></button>
+                <button id="greenButton" class="color-button" style="background-color: green;"></button>
+                <button id="yellowButton" class="color-button" style="background-color: yellow;"></button>
+            </div>
         </div>
         <p id="result"></p>
         <p id="averageTime"></p>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
