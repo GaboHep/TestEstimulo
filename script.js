@@ -75,6 +75,11 @@ function handleReaction(isCorrect) {
             const average = total / reactionTimes.length;
             document.getElementById('averageTime').textContent = `Tiempo promedio: ${average.toFixed(2)} ms`;
 
+            // Deshabilitar los botones de colores
+            buttons.forEach(buttonId => {
+                document.getElementById(buttonId).disabled = true;
+            });
+
             // Mostrar nuevamente el selector de intentos
             document.getElementById('startButton').classList.remove('hidden');
             document.getElementById('attemptsSelect').classList.remove('hidden');
@@ -84,4 +89,5 @@ function handleReaction(isCorrect) {
         document.getElementById('instruction').textContent = 'Color incorrecto. Selecciona Azul.';
     }
 }
+
 
